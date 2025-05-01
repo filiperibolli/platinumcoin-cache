@@ -6,10 +6,10 @@ services:
       - "6379:6379"
     command: ["redis-server", "--save", "900", "1"]
   redisinsight:
-    image: redislabs/redisinsight:latest
+    image: redislabs/redisinsight:1.14.0
     container_name: redisinsight
     ports:
-      - "8001:8001"
+      - "8002:8001"
   platinumcoin_cache_db:
     image: mysql:latest
     container_name: platinumcoin_cache_db
