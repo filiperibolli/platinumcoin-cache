@@ -15,7 +15,7 @@ public class RedisCache {
     private final RedisTemplate<String, OrderCache> redisTemplate;
 
     public void put(String key, OrderCache order) {
-        redisTemplate.opsForValue().set(key, order, Duration.ofHours(24));
+        redisTemplate.opsForValue().set(key, order, Duration.ofMinutes(1));
     }
 
     public Optional<OrderCache> get(String key) {

@@ -1,5 +1,6 @@
 package com.platinumcoin.cache.application.domain.exception;
 
+import java.util.Collections;
 import java.util.List;
 
 public class DomainException extends RuntimeException {
@@ -9,7 +10,7 @@ public class DomainException extends RuntimeException {
     public DomainException(String message, String code, List<ErrorDetail> errors) {
         super(message);
         this.code = code;
-        this.errors = errors;
+        this.errors = errors != null ? errors : Collections.emptyList();
     }
 
     public String getCode() {
