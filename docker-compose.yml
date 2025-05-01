@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   redis:
     image: redis:7
@@ -6,17 +5,23 @@ services:
     ports:
       - "6379:6379"
     command: ["redis-server", "--save", "900", "1"]
-  db:
-    image: postgres:15
-    container_name: postgres
-    environment:
-      POSTGRES_DB: appdb
-      POSTGRES_USER: appuser
-      POSTGRES_PASSWORD: secret
-    ports:
-      - "5432:5432"
   redisinsight:
     image: redislabs/redisinsight:latest
     container_name: redisinsight
     ports:
       - "8001:8001"
+  platinumcoin_cache_db:
+    image: mysql:latest
+    container_name: platinumcoin_cache_db
+    restart: always
+    ports:
+      - "3309:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: senha
+      MYSQL_DATABASE: platinumcoin
+      MYSQL_USER: user
+      MYSQL_PASSWORD: senha
+    volumes:
+      - platinumcoin_data:/var/lib/mysql
+volumes:
+  platinumcoin_data:

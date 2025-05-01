@@ -1,0 +1,48 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+# Diretórios do IntelliJ IDEA
+.idea/
+*.iml
+
+# Diretórios do Maven
+target/
+dependency-reduced-pom.xml
+release.properties
+
+# Logs
+*.log
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Configurações locais
+*.class
+*.swp
+*.swo
+
+# Arquivos temporários do sistema
+*.tmp
+*.bak
+
+# Evita comitar arquivos de testes temporários
+test-output/
