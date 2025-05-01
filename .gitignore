@@ -1,10 +1,20 @@
-HELP.md
+# Maven
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+dependency-reduced-pom.xml
+release.properties
 
-### STS ###
+# Maven Wrapper (remova se quiser manter o wrapper versionado)
+.mvn/
+mvnw
+mvnw.cmd
+
+# IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Spring Tool Suite
 .apt_generated
 .classpath
 .factorypath
@@ -13,36 +23,19 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-# Diretórios do IntelliJ IDEA
-.idea/
-*.iml
-
-# Diretórios do Maven
-target/
-dependency-reduced-pom.xml
-release.properties
-
 # Logs
 *.log
 
-# Arquivos de sistema
+# Sistema
 .DS_Store
 Thumbs.db
 
-# Configurações locais
+# Arquivos temporários
 *.class
+*.tmp
+*.bak
 *.swp
 *.swo
 
-# Arquivos temporários do sistema
-*.tmp
-*.bak
-
-# Evita comitar arquivos de testes temporários
+# Testes
 test-output/
